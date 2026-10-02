@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VibeBox — Tu vibe, nuevos descubrimientos</title>
+<meta name="description" content="VibeBox es una caja sorpresa digital personalizada: eliges lo que te gusta y descubres contenido nuevo. Prototipo académico de transformación digital.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#inicio">Saltar al contenido</a>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a class="logo" href="#inicio" aria-label="VibeBox, inicio">
+      <span class="logo__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+          <path d="M3 9h18v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9Z" fill="currentColor" opacity=".25"/>
+          <path d="M2.5 6.5h19v3h-19zM12 6.5V21" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M12 6.5S10.6 3 8.8 3 6.2 6.5 8.8 6.5H12Zm0 0s1.4-3.5 3.2-3.5 2.6 3.5 0 3.5H12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M3 9h18v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9Z" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+      </span>
+      <span class="logo__word"><span class="logo__vibe">Vibe</span><span class="logo__box">Box</span></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#como-funciona">¿Cómo funciona?</a>
+      <a href="#descubre">Descubre</a>
+      <a href="#demo">Experiencia</a>
+      <a href="#sobre">Sobre VibeBox</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="btn btn--primary btn--sm" data-open-modal>Descargar</button>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ CARRUSEL ============ -->
+<section class="carousel-section" id="inicio">
+  <div class="carousel" id="carousel" aria-roledescription="carrusel" aria-label="Novedades de VibeBox">
+    <div class="carousel__track" id="track">
+
+      <article class="slide slide--1" role="group" aria-label="1 de 4">
+        <div class="slide__art" aria-hidden="true">
+          <div class="orb orb--fuchsia"></div><div class="orb orb--violet"></div>
+          <div class="slide__emoji">🎁</div>
+        </div>
+        <div class="slide__body">
+          <p class="slide__kicker">VibeBox</p>
+          <h2 class="slide__title">Tu vibe, nuevos descubrimientos</h2>
+          <p class="slide__text">Elige lo que te gusta y deja que la caja haga el resto.</p>
+          <a class="btn btn--light btn--sm" href="#demo">Probar la demo</a>
+        </div>
+      </article>
+
+      <article class="slide slide--2" role="group" aria-label="2 de 4">
+        <div class="slide__art" aria-hidden="true">
+          <div class="orb orb--blue"></div><div class="orb orb--turq"></div>
+          <div class="slide__emoji">🎵🎬🎮</div>
+        </div>
+        <div class="slide__body">
+          <p class="slide__kicker">Nueve categorías</p>
+          <h2 class="slide__title">Una caja. Infinitas posibilidades</h2>
+          <p class="slide__text">Música, películas, videojuegos, libros y mucho más.</p>
+          <a class="btn btn--light btn--sm" href="#descubre">Ver categorías</a>
+        </div>
+      </article>
+
+      <article class="slide slide--3" role="group" aria-label="3 de 4">
+        <div class="slide__art" aria-hidden="true">
+          <div class="orb orb--violet"></div><div class="orb orb--amber"></div>
+          <div class="slide__emoji">🧠</div>
+        </div>
+        <div class="slide__body">
+          <p class="slide__kicker">Personalización</p>
+          <h2 class="slide__title">VibeBox aprende de ti</h2>
+          <p class="slide__text">Cada valoración afina las sorpresas que llegan después.</p>
+          <a class="btn btn--light btn--sm" href="#sobre">Cómo se personaliza</a>
+        </div>
+      </article>
+
+      <article class="slide slide--4" role="group" aria-label="4 de 4">
+        <div class="slide__art" aria-hidden="true">
+          <div class="orb orb--fuchsia"></div><div class="orb orb--blue"></div>
+          <div class="slide__emoji">✨</div>
+        </div>
+        <div class="slide__body">
+          <p class="slide__kicker">Solo hay una forma de saberlo</p>
+          <h2 class="slide__title">¿Qué habrá dentro?</h2>
+          <p class="slide__text">Abre una caja y descúbrelo.</p>
+          <a class="btn btn--light btn--sm" href="#demo">Abrir una VibeBox</a>
+        </div>
+      </article>
+
+    </div>
+
+    <button class="carousel__arrow carousel__arrow--prev" id="prevSlide" aria-label="Anterior">‹</button>
+    <button class="carousel__arrow carousel__arrow--next" id="nextSlide" aria-label="Siguiente">›</button>
+
+    <div class="carousel__dots" id="dots" role="tablist" aria-label="Ir a la tarjeta"></div>
+  </div>
+</section>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <h1 class="hero__title">No busques.<br>Descubre.</h1>
+      <p class="hero__lead">VibeBox cambia la forma de encontrar contenido: eliges tus gustos, abres una caja y recibes algo nuevo que encaja contigo.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#demo">Crear mi VibeBox</a>
+        <button class="btn btn--ghost" data-open-modal>Descargar para Android</button>
+      </div>
+      <dl class="stats" id="stats">
+        <div><dt>Categorías</dt><dd><span class="count" data-count="9">0</span></dd></div>
+        <div><dt>Niveles de rareza</dt><dd><span class="count" data-count="5">0</span></dd></div>
+        <div><dt>Segundos para empezar</dt><dd><span class="count" data-count="30">0</span></dd></div>
+      </dl>
+    </div>
+
+    <div class="hero__phone">
+      <div class="phone" aria-hidden="true">
+        <div class="phone__notch"></div>
+        <div class="phone__screen">
+          <div class="phone__bar"><span>🎁 VibeBox</span><span class="phone__dots">•••</span></div>
+          <p class="phone__label">Tu sorpresa de hoy</p>
+          <div class="phone__box">
+            <div class="giftbox giftbox--sm">
+              <div class="giftbox__lid"></div>
+              <div class="giftbox__base"></div>
+              <div class="giftbox__ribbon"></div>
+            </div>
+            <p class="phone__question">¿Qué habrá dentro?</p>
+          </div>
+          <div class="phone__btn">ABRIR VIBEBOX</div>
+          <p class="phone__foot">Racha de 4 días · 320 puntos Vibe</p>
+        </div>
+      </div>
+      <span class="float-card float-card--1">🎵 Música</span>
+      <span class="float-card float-card--2">🎮 Videojuegos</span>
+      <span class="float-card float-card--3">🎬 Películas</span>
+      <span class="float-card float-card--4">📚 Libros</span>
+      <span class="float-card float-card--5">🌎 Viajes</span>
+      <span class="float-card float-card--6">🎨 Arte</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEMO INTERACTIVA ============ -->
+<section class="demo" id="demo">
+  <div class="wrap">
+    <header class="sec-head sec-head--light">
+      <h2>Prueba la experiencia aquí mismo</h2>
+      <p>Esta es una simulación del flujo real de la aplicación. Elige tus gustos y abre tu caja.</p>
+    </header>
+
+    <div class="demo__panel">
+      <ol class="demo__steps" id="demoSteps">
+        <li class="is-active" data-step="1">Elige tus gustos</li>
+        <li data-step="2">Preparamos la caja</li>
+        <li data-step="3">Ábrela</li>
+      </ol>
+
+      <!-- PASO 1 -->
+      <div class="demo__stage is-visible" data-stage="1">
+        <h3 class="demo__q">¿Qué te gusta?</h3>
+        <p class="demo__hint">Selecciona al menos una. Puedes elegir varias.</p>
+        <div class="chips" id="chips">
+          <button class="chip" data-cat="juegos"><span>🎮</span>Videojuegos</button>
+          <button class="chip" data-cat="musica"><span>🎵</span>Música</button>
+          <button class="chip" data-cat="cine"><span>🎬</span>Películas</button>
+          <button class="chip" data-cat="libros"><span>📚</span>Libros</button>
+          <button class="chip" data-cat="comida"><span>🍔</span>Gastronomía</button>
+          <button class="chip" data-cat="viajes"><span>🌎</span>Viajes</button>
+          <button class="chip" data-cat="curiosidades"><span>🧠</span>Curiosidades</button>
+          <button class="chip" data-cat="arte"><span>🎨</span>Arte</button>
+        </div>
+        <div class="demo__actions">
+          <button class="btn btn--primary" id="createBtn" disabled>Crear mi VibeBox</button>
+          <span class="demo__counter" id="selCount">0 seleccionadas</span>
+        </div>
+      </div>
+
+      <!-- PASO 2 -->
+      <div class="demo__stage" data-stage="2">
+        <div class="loader" id="loader">
+          <div class="loader__ring"></div>
+          <p class="loader__text" id="loaderText">Leyendo tus gustos…</p>
+        </div>
+
+        <div class="ready" id="ready" hidden>
+          <h3 class="demo__q">🎁 ¡Tu VibeBox está lista!</h3>
+          <p class="demo__hint" id="readyTags"></p>
+          <div class="giftbox giftbox--lg" id="bigBox">
+            <div class="giftbox__glow"></div>
+            <div class="giftbox__lid"></div>
+            <div class="giftbox__base"></div>
+            <div class="giftbox__ribbon"></div>
+          </div>
+          <button class="btn btn--primary btn--lg" id="openBtn">Abrir</button>
+        </div>
+      </div>
+
+      <!-- PASO 3 -->
+      <div class="demo__stage" data-stage="3">
+        <div class="reveal" id="reveal">
+          <div class="reveal__head">
+            <span class="rarity" id="rarity">🟣 Épica</span>
+            <span class="match">Coincidencia con tus gustos: <strong id="matchVal">92%</strong></span>
+          </div>
+          <div class="reveal__card">
+            <p class="reveal__emoji" id="revealEmoji">🎮🎵</p>
+            <h3 class="reveal__title" id="revealTitle">Descubrimiento</h3>
+            <p class="reveal__text" id="revealText"></p>
+            <p class="reveal__why" id="revealWhy"></p>
+          </div>
+          <div class="rate" id="rate">
+            <button class="rate__btn" data-rate="love">❤️ Me gusta</button>
+            <button class="rate__btn" data-rate="ok">😐 Interesante</button>
+            <button class="rate__btn" data-rate="no">👎 No es para mí</button>
+          </div>
+          <p class="rate__feedback" id="rateFeedback" hidden></p>
+          <div class="demo__actions demo__actions--center">
+            <button class="btn btn--ghost" id="againBtn">Abrir otra caja</button>
+            <button class="btn btn--link" id="resetBtn">Cambiar mis gustos</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATEGORÍAS ============ -->
+<section class="cats" id="descubre">
+  <div class="wrap">
+    <header class="sec-head">
+      <h2>Una caja, muchas posibilidades</h2>
+      <p>Cada categoría tiene su propio color, su propio ritmo y su propio tipo de sorpresa.</p>
+    </header>
+    <div class="cat-grid">
+      <article class="cat cat--musica"><span class="cat__icon">🎵</span><h3>Música</h3><p>Artistas, discos y listas que todavía no estaban en tu rotación.</p></article>
+      <article class="cat cat--cine"><span class="cat__icon">🎬</span><h3>Películas y series</h3><p>Desde clásicos olvidados hasta estrenos que casi nadie menciona.</p></article>
+      <article class="cat cat--juegos"><span class="cat__icon">🎮</span><h3>Videojuegos</h3><p>Indies raros, joyas retro y experiencias cortas para una tarde.</p></article>
+      <article class="cat cat--libros"><span class="cat__icon">📚</span><h3>Libros</h3><p>Lecturas breves, novelas gráficas y ensayos que enganchan.</p></article>
+      <article class="cat cat--comida"><span class="cat__icon">🍔</span><h3>Gastronomía</h3><p>Recetas, técnicas y platos de cocinas que no conocías.</p></article>
+      <article class="cat cat--viajes"><span class="cat__icon">🌎</span><h3>Viajes</h3><p>Lugares, rutas y datos para soñar despierto o planear en serio.</p></article>
+      <article class="cat cat--curios"><span class="cat__icon">🧠</span><h3>Curiosidades</h3><p>Datos que no buscabas y que vas a contarle a alguien hoy.</p></article>
+      <article class="cat cat--arte"><span class="cat__icon">🎨</span><h3>Arte</h3><p>Ilustradores, corrientes y piezas para mirar con calma.</p></article>
+      <article class="cat cat--reto"><span class="cat__icon">🎲</span><h3>Desafíos</h3><p>Retos pequeños que te sacan de la zona cómoda durante un día.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CÓMO FUNCIONA / COMPARATIVA ============ -->
+<section class="compare" id="como-funciona">
+  <div class="wrap">
+    <header class="sec-head">
+      <h2>¿Por qué VibeBox?</h2>
+      <p>La diferencia no está en el catálogo. Está en cómo llegas a él.</p>
+    </header>
+    <div class="compare__grid">
+      <div class="col col--old">
+        <h3>Descubrimiento tradicional</h3>
+        <ol class="flow flow--old">
+          <li><span>Buscar</span><em>Ya sabías qué querías</em></li>
+          <li><span>Comparar</span><em>Diez pestañas abiertas</em></li>
+          <li><span>Elegir</span><em>Con dudas</em></li>
+          <li><span>Consumir</span><em>Más de lo mismo</em></li>
+        </ol>
+      </div>
+      <div class="col col--new">
+        <h3>Con VibeBox</h3>
+        <ol class="flow flow--new">
+          <li><span>Seleccionar gustos</span><em>Una vez, en 30 segundos</em></li>
+          <li><span>Abrir caja</span><em>Un momento, no una tarea</em></li>
+          <li><span>Descubrir</span><em>Algo que no habrías buscado</em></li>
+          <li><span>Valorar</span><em>Un toque y listo</em></li>
+          <li><span>Personalizar</span><em>La próxima caja afina</em></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRANSFORMACIÓN DIGITAL ============ -->
+<section class="digital" id="sobre">
+  <div class="wrap">
+    <header class="sec-head sec-head--light">
+      <h2>¿Dónde está la transformación digital?</h2>
+      <p>VibeBox no digitaliza un proceso existente: cambia cómo una persona se encuentra con contenido nuevo.</p>
+    </header>
+
+    <div class="pillars">
+      <article class="pillar"><span>🧠</span><h3>Personalización</h3><p>La experiencia cambia según cada usuario, no según un catálogo fijo.</p></article>
+      <article class="pillar"><span>📊</span><h3>Datos</h3><p>Cada interacción deja una señal útil sobre las preferencias reales.</p></article>
+      <article class="pillar"><span>⚙️</span><h3>Automatización</h3><p>El sistema selecciona candidatos y arma la caja sin intervención manual.</p></article>
+      <article class="pillar"><span>🎮</span><h3>Interactividad</h3><p>El usuario participa y decide, en lugar de recibir una lista pasiva.</p></article>
+      <article class="pillar"><span>🔄</span><h3>Adaptación</h3><p>Las recomendaciones mejoran con el comportamiento acumulado.</p></article>
+    </div>
+
+    <div class="loop" aria-label="Ciclo de personalización de VibeBox">
+      <span class="loop__item">Gustos</span>
+      <span class="loop__arrow" aria-hidden="true">→</span>
+      <span class="loop__item">Datos</span>
+      <span class="loop__arrow" aria-hidden="true">→</span>
+      <span class="loop__item">Personalización</span>
+      <span class="loop__arrow" aria-hidden="true">→</span>
+      <span class="loop__item loop__item--hi">Sorpresa</span>
+      <span class="loop__arrow" aria-hidden="true">→</span>
+      <span class="loop__item">Interacción</span>
+      <span class="loop__arrow" aria-hidden="true">→</span>
+      <span class="loop__item">Nueva recomendación</span>
+      <span class="loop__back" aria-hidden="true">el ciclo vuelve a empezar ↺</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GAMIFICACIÓN ============ -->
+<section class="game" id="gamificacion">
+  <div class="wrap">
+    <header class="sec-head sec-head--light">
+      <h2>Descubrir también se juega</h2>
+      <p>El sistema de recompensas mantiene viva la costumbre de abrir una caja cada día.</p>
+    </header>
+
+    <div class="game__grid">
+      <div class="reward reward--streak">
+        <p class="reward__k">🔥 Racha de descubrimientos</p>
+        <p class="reward__v">4 días</p>
+        <div class="bar"><i style="width:57%"></i></div>
+        <p class="reward__s">3 días más para la caja semanal</p>
+      </div>
+      <div class="reward reward--points">
+        <p class="reward__k">⭐ Puntos Vibe</p>
+        <p class="reward__v"><span class="count" data-count="320">0</span></p>
+        <p class="reward__s">Ganas puntos al abrir y al valorar</p>
+      </div>
+      <div class="reward reward--badges">
+        <p class="reward__k">🏆 Logros</p>
+        <ul class="badges">
+          <li>Primera caja</li>
+          <li>Cinco categorías</li>
+          <li class="is-locked">Explorador sonoro</li>
+        </ul>
+      </div>
+      <div class="reward reward--special">
+        <p class="reward__k">🎁 Cajas especiales</p>
+        <p class="reward__s">Se desbloquean por racha, por temporada o por combinar categorías poco habituales.</p>
+      </div>
+    </div>
+
+    <h3 class="rar-title">💎 Niveles de rareza</h3>
+    <ul class="rarities">
+      <li class="rar rar--common"><span>⚪</span>Común</li>
+      <li class="rar rar--uncommon"><span>🟢</span>Poco común</li>
+      <li class="rar rar--rare"><span>🔵</span>Rara</li>
+      <li class="rar rar--epic"><span>🟣</span>Épica</li>
+      <li class="rar rar--legend"><span>🟡</span>Legendaria</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="final">
+  <div class="wrap final__inner">
+    <h2>Tu próxima vibe está dentro</h2>
+    <p>Abre la demo, elige tus gustos y mira qué te toca.</p>
+    <div class="hero__cta">
+      <a class="btn btn--primary btn--lg" href="#demo">Probar VibeBox</a>
+      <button class="btn btn--ghost btn--lg" data-open-modal>Descargar</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <span class="logo__word"><span class="logo__vibe">Vibe</span><span class="logo__box">Box</span></span>
+      <p>Tu vibe, nuevos descubrimientos.</p>
+    </div>
+    <nav class="footer__col" aria-label="Secciones">
+      <h3>Navegación</h3>
+      <a href="#inicio">Inicio</a>
+      <a href="#como-funciona">¿Cómo funciona?</a>
+      <a href="#descubre">Descubre</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <nav class="footer__col" aria-label="Legal">
+      <h3>Legal</h3>
+      <a href="#" data-legal="privacidad">Política de privacidad</a>
+      <a href="#" data-legal="terminos">Términos y condiciones</a>
+    </nav>
+    <div class="footer__col" id="contacto">
+      <h3>Contacto</h3>
+      <p>hola@vibebox.demo</p>
+      <p class="footer__note">Prototipo sin backend: los formularios y descargas son simulados.</p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026 VibeBox — Proyecto académico de transformación digital. Concepto ficticio, sin empresa real detrás.</p>
+  </div>
+</footer>
+
+<!-- ============ NAVEGACIÓN LATERAL (regalos del boceto) ============ -->
+<nav class="sidedock" id="sidedock" aria-label="Accesos rápidos">
+  <a href="#como-funciona" data-tip="Cómo funciona">🎁<span>Cómo funciona</span></a>
+  <a href="#demo" data-tip="Personalización">🎁<span>Personalización</span></a>
+  <a href="#descubre" data-tip="Categorías">🎁<span>Categorías</span></a>
+  <a href="#gamificacion" data-tip="Gamificación">🎁<span>Gamificación</span></a>
+</nav>
+
+<button class="to-top" id="toTop" aria-label="Volver arriba">↑</button>
+
+<!-- ============ MODAL ============ -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__backdrop" data-close-modal></div>
+  <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal__x" data-close-modal aria-label="Cerrar">×</button>
+    <div class="modal__emoji">🎁</div>
+    <h2 id="modalTitle">Próximamente disponible para Android</h2>
+    <p>VibeBox es un prototipo académico: todavía no existe una aplicación descargable. Mientras tanto, la demo de esta página reproduce la experiencia completa.</p>
+    <a class="btn btn--primary" href="#demo" data-close-modal>Ir a la demo</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
